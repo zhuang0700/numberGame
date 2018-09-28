@@ -66,7 +66,7 @@
 
 	<!--&lt;!&ndash; 扫描mapper类 &ndash;&gt;-->
 	<!--<bean id="wolfMapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-		<!--<property name="basePackage" value="com.telan.werewolf.mapper.**" />-->
+		<!--<property name="basePackage" value="com.telan.numbergame.mapper.**" />-->
 	<!--</bean>-->
 	<!-- ==================   tair END    ==================== -->
 

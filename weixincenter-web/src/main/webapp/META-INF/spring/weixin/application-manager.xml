@@ -9,8 +9,8 @@
 	<context:annotation-config />
 
     <bean id="wxSessionManager" class="com.telan.weixincenter.manager.WxSessionManager">
-        <property name="wxspAppid" value="${wx.werewolf.appid}"/>
-        <property name="wxspSecret" value="${wx.werewolf.appsecret}" />
+        <property name="wxspAppid" value="${wx.numbergame.appid}"/>
+        <property name="wxspSecret" value="${wx.numbergame.appsecret}" />
     </bean>
 
 </beans>

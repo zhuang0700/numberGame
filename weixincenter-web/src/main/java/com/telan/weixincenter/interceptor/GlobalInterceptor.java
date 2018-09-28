@@ -10,9 +10,9 @@ import javax.servlet.http.HttpSession;
 
 import com.alibaba.fastjson.JSONObject;
 import com.telan.weixincenter.result.WXReturnCode;
-import com.telan.werewolf.domain.UserDO;
-import com.telan.werewolf.manager.MemSessionManager;
-import com.telan.werewolf.utils.SessionHelper;
+import com.telan.numbergame.domain.UserDO;
+import com.telan.numbergame.manager.MemSessionManager;
+import com.telan.numbergame.utils.SessionHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

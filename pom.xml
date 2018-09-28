@@ -13,8 +13,8 @@
 		<module>weixincenter-biz</module>
 		<module>weixincenter-client</module>
 		<module>weixincenter-web</module>
-		<module>werewolf-biz</module>
-		<module>werewolf-client</module>
+		<module>numbergame-biz</module>
+		<module>numbergame-client</module>
 	</modules>
 
 	<properties>
@@ -73,34 +73,34 @@
 				<type>jar</type>
 			</dependency>
 			<dependency>
-				<groupId>com.telan.werewolf</groupId>
+				<groupId>com.telan.numbergame</groupId>
 				<artifactId>weixincenter-biz</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.telan.werewolf</groupId>
+				<groupId>com.telan.numbergame</groupId>
 				<artifactId>weixincenter-client</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		
 			<dependency>
-				<groupId>com.telan.werewolf</groupId>
+				<groupId>com.telan.numbergame</groupId>
 				<artifactId>weixincenter-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.telan.werewolf</groupId>
+				<groupId>com.telan.numbergame</groupId>
 				<artifactId>weixincenter-web</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.telan.werewolf</groupId>
-				<artifactId>werewolf-client</artifactId>
+				<groupId>com.telan.numbergame</groupId>
+				<artifactId>numbergame-client</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.telan.werewolf</groupId>
-				<artifactId>werewolf-biz</artifactId>
+				<groupId>com.telan.numbergame</groupId>
+				<artifactId>numbergame-biz</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>

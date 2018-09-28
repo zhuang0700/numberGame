@@ -55,7 +55,7 @@
 	-->
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/werewolf/*"/>
+			<mvc:mapping path="/numbergame/*"/>
 			<bean class="com.telan.weixincenter.interceptor.GlobalInterceptor">
 			</bean>
 		</mvc:interceptor>

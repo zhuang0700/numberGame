@@ -1,8 +1,8 @@
 package com.telan.weixincenter.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.telan.werewolf.domain.UserDO;
-import com.telan.werewolf.manager.MemSessionManager;
+import com.telan.numbergame.domain.UserDO;
+import com.telan.numbergame.manager.MemSessionManager;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

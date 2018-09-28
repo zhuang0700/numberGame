@@ -6,7 +6,7 @@
 	<bean id="wolfDataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		  destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="${werewolf.db.url}"/>
+		<property name="url" value="${numbergame.db.url}"/>
 		<property name="username" value="${db.username}"/>
 		<property name="password" value="${db.password}"/>
 	</bean>
@@ -14,13 +14,13 @@
 	<!-- 配置ibatis映射信息 -->
 	<bean id="wolfSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="wolfDataSource"/>
-		<property name="mapperLocations" value="classpath:com/telan/werewolf/mapper/*.xml"/>
-		<property name="typeAliasesPackage" value="com.telan.werewolf.domain"/>
+		<property name="mapperLocations" value="classpath:com.telan.numbergame/mapper/*.xml"/>
+		<property name="typeAliasesPackage" value="com.telan.numbergame.domain"/>
 	</bean>
 
 	<!-- 扫描mapper类 -->
-	<bean id="wolfMapperScannerConfigurer" class="com.telan.werewolf.utils.MapperScannerConfigurer">
-		<property name="basePackage" value="com.telan.werewolf.mapper"/>
+	<bean id="wolfMapperScannerConfigurer" class="com.telan.numbergame.utils.MapperScannerConfigurer">
+		<property name="basePackage" value="com.telan.numbergame.mapper"/>
 		<property name="sqlSessionTemplateBeanName" value="wolfSqlSession"/>
 	</bean>
 

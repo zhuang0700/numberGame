@@ -59,7 +59,7 @@
 	<!--</filter>-->
 	<!--<filter-mapping>-->
 		<!--<filter-name>loginFilter</filter-name>-->
-		<!--<url-pattern>/werewolf/*</url-pattern>-->
+		<!--<url-pattern>/numbergame/*</url-pattern>-->
 	<!--</filter-mapping>-->
 	<servlet>
 		<servlet-name>springmvc</servlet-name>

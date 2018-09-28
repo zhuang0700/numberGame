@@ -4,8 +4,8 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.telan.werewolf</groupId>
-		<artifactId>werewolf</artifactId>
+		<groupId>com.telan.numbergame</groupId>
+		<artifactId>numbergame</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -97,22 +97,22 @@
 		<!--</dependency>-->
 		<!-- 父项目移入 -->
 		<dependency>
-			<groupId>com.telan.werewolf</groupId>
+			<groupId>com.telan.numbergame</groupId>
 			<artifactId>weixincenter-client</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.telan.werewolf</groupId>
+			<groupId>com.telan.numbergame</groupId>
 			<artifactId>weixincenter-biz</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.telan.werewolf</groupId>
-			<artifactId>werewolf-client</artifactId>
+			<groupId>com.telan.numbergame</groupId>
+			<artifactId>numbergame-client</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.telan.werewolf</groupId>
-			<artifactId>werewolf-biz</artifactId>
+			<groupId>com.telan.numbergame</groupId>
+			<artifactId>numbergame-biz</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>

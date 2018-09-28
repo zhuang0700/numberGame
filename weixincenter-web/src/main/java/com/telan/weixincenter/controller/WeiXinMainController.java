@@ -6,10 +6,10 @@ import com.telan.weixincenter.manager.WxSessionManager;
 import com.telan.weixincenter.utils.SignUtil;
 import com.telan.weixincenter.utils.SpringHttpHolder;
 
-import com.telan.werewolf.domain.UserDO;
-import com.telan.werewolf.enums.BaseStatus;
-import com.telan.werewolf.manager.MemSessionManager;
-import com.telan.werewolf.manager.UserManager;
+import com.telan.numbergame.domain.UserDO;
+import com.telan.numbergame.enums.BaseStatus;
+import com.telan.numbergame.manager.MemSessionManager;
+import com.telan.numbergame.manager.UserManager;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
