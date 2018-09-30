@@ -1,15 +1,19 @@
 package com.telan.numbergame.game.enums;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  */
-public enum PlayerResult {
-    NOT_FINISH("无结果",0),
-    WIN("胜利",1),
-    LOSE("失败",2);
+public enum GameProgress {
+    PROCESS("进行中",2),
+    SUCCESS("成功",3),
+    FAILED("失败",4),
+    ;
     private String desc;
     private int type;
 
-    PlayerResult(String desc, int type) {
+    GameProgress(String desc, int type) {
         this.desc = desc;
         this.type = type;
     }
@@ -22,8 +26,8 @@ public enum PlayerResult {
         return type;
     }
 
-    public static PlayerResult getByType(int type) {
-        for (PlayerResult userType : values()) {
+    public static GameProgress getByType(int type) {
+        for (GameProgress userType : values()) {
             if (userType.getType() == type) {
                 return userType;
             }
@@ -31,11 +35,11 @@ public enum PlayerResult {
         return null;
     }
 
-    public static PlayerResult getByName(String name) {
+    public static GameProgress getByName(String name) {
         if (name == null) {
             return null;
         }
-        for (PlayerResult userType : values()) {
+        for (GameProgress userType : values()) {
             if (userType.name().equals(name)) {
                 return userType;
             }
@@ -43,24 +47,24 @@ public enum PlayerResult {
         return null;
     }
 
-    public static PlayerResult getByTypeWithDefault(int status) {
-        for (PlayerResult userType : values()) {
+    public static GameProgress getByTypeWithDefault(int status) {
+        for (GameProgress userType : values()) {
             if (userType.getType() == status) {
                 return userType;
             }
         }
-        return NOT_FINISH;
+        return SUCCESS;
     }
 
-    public static PlayerResult getByNameWithDefault(String name) {
+    public static GameProgress getByNameWithDefault(String name) {
         if (name == null) {
-            return NOT_FINISH;
+            return SUCCESS;
         }
-        for (PlayerResult userType : values()) {
+        for (GameProgress userType : values()) {
             if (userType.name().equals(name)) {
                 return userType;
             }
         }
-        return NOT_FINISH;
+        return SUCCESS;
     }
 }

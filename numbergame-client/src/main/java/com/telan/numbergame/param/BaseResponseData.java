@@ -1,7 +1,5 @@
 package com.telan.numbergame.param;
 
-import com.telan.numbergame.game.domain.ActionResult;
-import com.telan.numbergame.game.domain.GameData;
 
 /**
  * Created by weiwenliang on 17/8/22.
@@ -13,9 +11,6 @@ public class BaseResponseData {
 
     private String msg;
 
-    private GameData gameData;
-
-    private ActionResult actionResult;
 
     public int getStatus() {
         return status;
@@ -41,21 +36,6 @@ public class BaseResponseData {
         this.msg = msg;
     }
 
-    public GameData getGameData() {
-        return gameData;
-    }
-
-    public void setGameData(GameData gameData) {
-        this.gameData = gameData;
-    }
-
-    public ActionResult getActionResult() {
-        return actionResult;
-    }
-
-    public void setActionResult(ActionResult actionResult) {
-        this.actionResult = actionResult;
-    }
 }
 
 

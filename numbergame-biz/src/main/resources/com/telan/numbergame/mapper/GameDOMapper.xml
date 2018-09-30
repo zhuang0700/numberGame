@@ -4,16 +4,19 @@
   <resultMap id="BaseResultMap" type="com.telan.numbergame.domain.GameDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="type" property="type" jdbcType="INTEGER" />
-    <result column="creator_id" property="creatorId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="game_id" property="gameId" jdbcType="BIGINT" />
     <result column="status" property="status" jdbcType="INTEGER" />
-    <result column="result" property="result" jdbcType="INTEGER" />
-    <result column="player_num" property="playerNum" jdbcType="INTEGER" />
-    <result column="has_judge" property="hasJudge" jdbcType="INTEGER" />
+    <result column="progress" property="progress" jdbcType="INTEGER" />
+    <result column="score" property="score" jdbcType="BIGINT" />
     <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
     <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
   </resultMap>
+  <sql id="Base_Column_List_Without_Id" >
+    type, game_id, user_id, status, progress, score, gmt_modified, gmt_created
+  </sql>
   <sql id="Base_Column_List" >
-    id, type, creator_id, status, result, player_num, has_judge, gmt_modified, gmt_created
+    id, <include refid="Base_Column_List_Without_Id" />
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="long" >
     select 
@@ -26,11 +29,9 @@
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.telan.numbergame.domain.GameDO" useGeneratedKeys="true" keyProperty="id" >
-    insert into game (type, creator_id, status, result,
-      player_num, has_judge, gmt_modified, 
-      gmt_created)
-    values (#{type,jdbcType=INTEGER}, #{creatorId,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, #{result,jdbcType=INTEGER},
-      #{playerNum,jdbcType=INTEGER}, #{hasJudge,jdbcType=INTEGER}, #{gmtModified,jdbcType=TIMESTAMP}, 
+    insert into game (<include refid="Base_Column_List_Without_Id" />)
+    values (#{type,jdbcType=INTEGER}, #{gameId,jdbcType=BIGINT},#{userId,jdbcType=BIGINT}, #{status,jdbcType=INTEGER},
+      #{progress,jdbcType=INTEGER}, #{score,jdbcType=BIGINT}, #{gmtModified,jdbcType=TIMESTAMP},
       #{gmtCreated,jdbcType=TIMESTAMP})
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.telan.numbergame.domain.GameDO" >
@@ -42,14 +43,11 @@
       <if test="status != null" >
         status = #{status,jdbcType=INTEGER},
       </if>
-      <if test="result != null" >
-        result = #{result,jdbcType=INTEGER},
+      <if test="progress != null" >
+        progress = #{progress,jdbcType=INTEGER},
       </if>
-      <if test="playerNum != null" >
-        player_num = #{playerNum,jdbcType=INTEGER},
-      </if>
-      <if test="hasJudge != null" >
-        has_judge = #{hasJudge,jdbcType=INTEGER},
+      <if test="score != null" >
+        score = #{score,jdbcType=BIGINT},
       </if>
         gmt_modified = now()
     </set>
@@ -80,13 +78,17 @@
           #{status}
         </foreach>
       </if>
-      <if test="result != null">
+      <if test="progress != null">
         and
-        result = #{result}
+        progress = #{progress}
       </if>
       <if test="type != null">
         and
         type = #{type}
+      </if>
+      <if test="userId != null">
+        and
+        user_id = #{userId}
       </if>
       <if test="ids != null and ids.size() > 0">
         and id in
@@ -94,9 +96,9 @@
           #{item}
         </foreach>
       </if>
-      <if test="creatorId != null">
+      <if test="gameId != null">
         and
-        creator_id = #{creatorId}
+        user_id = #{gameId}
       </if>
     </where>
   </sql>

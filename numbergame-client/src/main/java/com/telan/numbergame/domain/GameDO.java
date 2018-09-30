@@ -8,15 +8,15 @@ public class GameDO implements Serializable {
 
     private int type;
 
-    private long creatorId;
+    private long gameId;
+
+    private long userId;
 
     private int status;
 
-    private int result;
+    private int progress;
 
-    private int playerNum;
-
-    private int hasJudge;
+    private long score;
 
     private Date gmtModified;
 
@@ -40,12 +40,12 @@ public class GameDO implements Serializable {
         this.type = type;
     }
 
-    public long getCreatorId() {
-        return creatorId;
+    public long getGameId() {
+        return gameId;
     }
 
-    public void setCreatorId(long creatorId) {
-        this.creatorId = creatorId;
+    public void setGameId(long gameId) {
+        this.gameId = gameId;
     }
 
     public int getStatus() {
@@ -56,28 +56,28 @@ public class GameDO implements Serializable {
         this.status = status;
     }
 
-    public int getPlayerNum() {
-        return playerNum;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setPlayerNum(int playerNum) {
-        this.playerNum = playerNum;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
-    public int getHasJudge() {
-        return hasJudge;
+    public int getProgress() {
+        return progress;
     }
 
-    public int getResult() {
-        return result;
+    public void setProgress(int progress) {
+        this.progress = progress;
     }
 
-    public void setResult(int result) {
-        this.result = result;
+    public long getScore() {
+        return score;
     }
 
-    public void setHasJudge(int hasJudge) {
-        this.hasJudge = hasJudge;
+    public void setScore(long score) {
+        this.score = score;
     }
 
     public Date getGmtModified() {

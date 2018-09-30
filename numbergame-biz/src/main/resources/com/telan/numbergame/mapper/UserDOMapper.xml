@@ -3,13 +3,13 @@
 <mapper namespace="com.telan.numbergame.mapper.UserDOMapper" >
   <resultMap id="BaseResultMap" type="com.telan.numbergame.domain.UserDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="open_id" property="openId" jdbcType="VARCHAR" />
-    <result column="union_id" property="unionId" jdbcType="VARCHAR" />
-    <result column="nick" property="nick" jdbcType="VARCHAR" />
-    <result column="avatar" property="avatar" jdbcType="VARCHAR" />
-    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
-    <result column="status" property="status" jdbcType="INTEGER" />
+    <progress column="open_id" property="openId" jdbcType="VARCHAR" />
+    <progress column="union_id" property="unionId" jdbcType="VARCHAR" />
+    <progress column="nick" property="nick" jdbcType="VARCHAR" />
+    <progress column="avatar" property="avatar" jdbcType="VARCHAR" />
+    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <progress column="status" property="status" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, open_id, union_id, nick, avatar, gmt_created, gmt_modified, status

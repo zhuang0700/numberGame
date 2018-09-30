@@ -3,11 +3,11 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.channel.WxChannelClassMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.channel.WxChannelClassDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-    <result column="channel_class_name" property="channelClassName" jdbcType="VARCHAR" />
-    <result column="order_num" property="orderNum" jdbcType="INTEGER" />
-    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+    <progress column="channel_class_name" property="channelClassName" jdbcType="VARCHAR" />
+    <progress column="order_num" property="orderNum" jdbcType="INTEGER" />
+    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, wx_merchant_id, channel_class_name, order_num, gmt_created,gmt_modified

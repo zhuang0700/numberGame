@@ -3,15 +3,15 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.fans.WxFansToTagMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.fans.WxFansToTagDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="INTEGER" />
-    <result column="oppen_id" property="oppenId" jdbcType="VARCHAR" />
-    <result column="tag_id" property="tagId" jdbcType="BIGINT" />
-    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="INTEGER" />
+    <progress column="oppen_id" property="oppenId" jdbcType="VARCHAR" />
+    <progress column="tag_id" property="tagId" jdbcType="BIGINT" />
+    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
     <association  property="wxFansTag"  javaType="com.telan.weixincenter.domain.fans.WxFansTagDO" >
     	<id column="id" property="id" jdbcType="BIGINT" />
-	    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-	    <result column="tag_name" property="tagName" jdbcType="VARCHAR" />
+	    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+	    <progress column="tag_name" property="tagName" jdbcType="VARCHAR" />
     </association >
   </resultMap>
   <sql id="Base_Column_List" >

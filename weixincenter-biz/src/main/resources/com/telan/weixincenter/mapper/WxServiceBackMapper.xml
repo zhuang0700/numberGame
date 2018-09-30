@@ -3,17 +3,17 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.base.WxServiceBackMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.base.WxServiceBackDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="back_type" property="backType" jdbcType="INTEGER" />
-    <result column="back_content" property="backContent" jdbcType="INTEGER" />
-    <result column="material_id" property="materialId" jdbcType="BIGINT" />
-    <result column="material_type_id" property="materialTypeId" jdbcType="INTEGER" />
-    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
-    <result column="reserve" property="reserve" jdbcType="VARCHAR" />
+    <progress column="back_type" property="backType" jdbcType="INTEGER" />
+    <progress column="back_content" property="backContent" jdbcType="INTEGER" />
+    <progress column="material_id" property="materialId" jdbcType="BIGINT" />
+    <progress column="material_type_id" property="materialTypeId" jdbcType="INTEGER" />
+    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <progress column="reserve" property="reserve" jdbcType="VARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.telan.weixincenter.domain.base.WxServiceBackDO" extends="BaseResultMap" >
-    <result column="back_content" property="backContent" jdbcType="LONGVARCHAR" />
+    <progress column="back_content" property="backContent" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, back_type, material_id, wx_merchant_id, gmt_created,gmt_modified, material_type_id, reserve

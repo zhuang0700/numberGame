@@ -4,11 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.telan.numbergame.domain.UserDO;
 import com.telan.numbergame.enums.SocketMsgType;
 import com.telan.numbergame.enums.WeErrorCode;
-import com.telan.numbergame.game.domain.ActionResult;
-import com.telan.numbergame.game.domain.GameInfo;
-import com.telan.numbergame.game.domain.PlayerAction;
 import com.telan.numbergame.game.param.OperateGameParam;
-import com.telan.numbergame.game.process.GameProcessor;
 import com.telan.numbergame.manager.MemSessionManager;
 import com.telan.numbergame.param.BaseRequestData;
 import com.telan.numbergame.param.BaseResponseData;
@@ -27,9 +23,6 @@ public class BaseProcessor implements EventProcessor {
 	@Autowired
 	private MemSessionManager memSessionManager;
 
-	@Autowired
-	private GameProcessor gameProcessor;
-
 	public BaseResponseData processRequest(BaseRequestData requestMessage) {
 		LOGGER.debug("requestMessage={}", JSONObject.toJSONString(requestMessage));
 
@@ -44,35 +37,8 @@ public class BaseProcessor implements EventProcessor {
 			resultSupport.setErrorCode(WeErrorCode.WEIXIN_LOGIN_ERROR);
 			return ResponseMapUtils.getFailResponse(resultSupport);
 		}
-
-		GameBaseRequest param = (GameBaseRequest)requestMessage.getMsgData();
-		WeBaseResult<GameInfo> result = null;
-		BaseResponseData responseData = new BaseResponseData();
-		switch (msgType) {
-			case START_GAME:
-				result = gameProcessor.startGame(userDO.getId(), param.getGameId());
-				responseData = ResponseMapUtils.getGameInfoResponse(result, userDO);
-				break;
-			case GAME_INFO:
-				result = gameProcessor.getCurrentGameInfo(userDO.getId());
-				responseData = ResponseMapUtils.getGameInfoResponse(result, userDO);
-				break;
-			case QUIT_GAME:
-				OperateGameParam operateGameParam = (OperateGameParam)param;
-				result = gameProcessor.quitGame(operateGameParam);
-				responseData = ResponseMapUtils.getGameInfoResponse(result, userDO);
-				break;
-			case PLAYER_ACTION:
-				PlayerAction playerAction  = (PlayerAction)param;
-				WeBaseResult<ActionResult> actionResult = gameProcessor.playerAction(playerAction);
-				responseData = ResponseMapUtils.getActionResultResponse(actionResult, userDO);
-				break;
-			default:
-				break;
-		}
-
-		LOGGER.debug("response={}",JSONObject.toJSONString(responseData));
-		return responseData;
+//		LOGGER.debug("response={}",JSONObject.toJSONString(responseData));
+		return null;
 	}
 
 }

@@ -3,16 +3,16 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.templates.WxTemplatesMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.templates.WxTemplatesDO" >
 		<id column="template_id" property="templateId" jdbcType="BIGINT"/>
-		<result column="wx_merchant_id" property="wxMerchantId"/>
-		<result column="tipstype" property="tipstype"/>
-		<result column="tipstitle" property="tipstitle"/>
-		<result column="tempid" property="tempid"/>
-		<result column="hreftype" property="hreftype"/>
-		<result column="customlink" property="customlink"/>
-		<result column="paymentTipsCon" property="paymentTipsCon"/>
-		<result column="status" property="status"/>
-		<result column="gmt_created" property="gmtCreated"/>
-		<result column="gmt_modified" property="gmtModified"/>
+		<progress column="wx_merchant_id" property="wxMerchantId"/>
+		<progress column="tipstype" property="tipstype"/>
+		<progress column="tipstitle" property="tipstitle"/>
+		<progress column="tempid" property="tempid"/>
+		<progress column="hreftype" property="hreftype"/>
+		<progress column="customlink" property="customlink"/>
+		<progress column="paymentTipsCon" property="paymentTipsCon"/>
+		<progress column="status" property="status"/>
+		<progress column="gmt_created" property="gmtCreated"/>
+		<progress column="gmt_modified" property="gmtModified"/>
 	</resultMap>  
   <!-- 查询模板信息 -->       
 	<select id="queryWxTemplatesByMerchantId" parameterType="long" resultMap="BaseResultMap">
@@ -116,12 +116,12 @@
 	<!-- 查询模板设置信息 -->
 	<resultMap type="com.telan.weixincenter.domain.templates.WxTemplatesItemDO" id="wxTemplatesItemList">
 		<id column="template_item_id" property="templateItemId"/>
-		<result column="template_id" property="templateId"/>
-		<result column="wx_merchant_id" property="wxMerchantId"/>
-		<result column="field_name" property="fieldName"/>
-		<result column="field_value" property="fieldValue"/>
-		<result column="field_color" property="fieldColor"/>
-		<result column="inserttime" property="inserttime"/>
+		<progress column="template_id" property="templateId"/>
+		<progress column="wx_merchant_id" property="wxMerchantId"/>
+		<progress column="field_name" property="fieldName"/>
+		<progress column="field_value" property="fieldValue"/>
+		<progress column="field_color" property="fieldColor"/>
+		<progress column="inserttime" property="inserttime"/>
 	</resultMap>
 	<select id="queryWxTemplatesItemByTemplateId"  resultMap="wxTemplatesItemList">
 		select * from wx_templates_item where template_id=#{templateId} and wx_merchant_id=#{wxMerchantId}
@@ -193,13 +193,13 @@
 	 <!-- 查询历史信息 -->
 	<resultMap type="com.telan.weixincenter.domain.templates.WxTemplatesHistoryDO" id="wxTemplatesHistoryList">
 		<id column="mass_history_id" property="massHistoryId"/>
-		<result column="wx_merchant_id" property="wxMerchantId"/>
-		<result column="templatename" property="templatename"/>
-		<result column="sendtotals" property="sendtotals"/>
-		<result column="arrivedtotals" property="arrivedtotals"/>
-		<result column="templateid" property="templateid"/>
-		<result column="failemsg" property="failemsg"/>
-		<result column="inserttime" property="inserttime"/>
+		<progress column="wx_merchant_id" property="wxMerchantId"/>
+		<progress column="templatename" property="templatename"/>
+		<progress column="sendtotals" property="sendtotals"/>
+		<progress column="arrivedtotals" property="arrivedtotals"/>
+		<progress column="templateid" property="templateid"/>
+		<progress column="failemsg" property="failemsg"/>
+		<progress column="inserttime" property="inserttime"/>
 	</resultMap>
 	<select id="queryWxTemplatesHistoryByMerchantId" parameterType="int" resultMap="wxTemplatesHistoryList">
 		select * from wx_templates_history where  wx_merchant_id=#{wxMerchantId} order by gmt_created desc

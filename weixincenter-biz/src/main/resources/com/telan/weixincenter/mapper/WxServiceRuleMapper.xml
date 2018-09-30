@@ -4,19 +4,19 @@
 	<resultMap id="BaseResultMap"
 		type="com.telan.weixincenter.domain.base.WxServiceRuleDO">
 		<id column="id" property="id" jdbcType="BIGINT" />
-		<result column="rule_name" property="ruleName" jdbcType="VARCHAR" />
-		<result column="material_id" property="materialId" jdbcType="BIGINT" />
-		<result column="wx_merchant_id" property="wxMerchantId"
+		<progress column="rule_name" property="ruleName" jdbcType="VARCHAR" />
+		<progress column="material_id" property="materialId" jdbcType="BIGINT" />
+		<progress column="wx_merchant_id" property="wxMerchantId"
 			jdbcType="BIGINT" />
-		<result column="material_type_id" property="materialTypeId"
+		<progress column="material_type_id" property="materialTypeId"
 			jdbcType="INTEGER" />
-		<result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-		<result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
-		<result column="reserve" property="reserve" jdbcType="INTEGER" />
+		<progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+		<progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+		<progress column="reserve" property="reserve" jdbcType="INTEGER" />
 	</resultMap>
 	<resultMap id="ResultMapWithBLOBs"
 		type="com.telan.weixincenter.domain.base.WxServiceRuleDO" extends="BaseResultMap">
-		<result column="rule_content" property="ruleContent" jdbcType="LONGVARCHAR" />
+		<progress column="rule_content" property="ruleContent" jdbcType="LONGVARCHAR" />
 	</resultMap>
 	<sql id="Base_Column_List">
 		id, rule_name, material_id, wx_merchant_id, gmt_created,gmt_modified,

@@ -1,7 +1,6 @@
 package com.telan.numbergame.game.param;
 
 import com.telan.numbergame.domain.UserDO;
-import com.telan.numbergame.game.domain.BaseGameInfo;
 import com.telan.numbergame.param.GameBaseRequest;
 
 /**
@@ -10,7 +9,11 @@ import com.telan.numbergame.param.GameBaseRequest;
 public class OperateGameParam extends GameBaseRequest{
     private UserDO user;
 
-    private int mockPlayerNum;
+    private Integer status;
+
+    private Long progress;
+
+    private Long score;
 
     public UserDO getUser() {
         return user;
@@ -20,11 +23,27 @@ public class OperateGameParam extends GameBaseRequest{
         this.user = user;
     }
 
-    public int getMockPlayerNum() {
-        return mockPlayerNum;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setMockPlayerNum(int mockPlayerNum) {
-        this.mockPlayerNum = mockPlayerNum;
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Long getProgress() {
+        return progress;
+    }
+
+    public void setProgress(Long progress) {
+        this.progress = progress;
+    }
+
+    public Long getScore() {
+        return score;
+    }
+
+    public void setScore(Long score) {
+        this.score = score;
     }
 }

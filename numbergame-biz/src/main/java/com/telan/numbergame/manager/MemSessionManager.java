@@ -29,18 +29,18 @@ public class MemSessionManager {
 	 */
 	public String addUser(String sessionKey, UserDO user) {
 		user.setSessionKey(sessionKey);
-		String werewolfSessionKey = SessionKeyUtil.generateSessionKey();
-		usersMap.put(werewolfSessionKey, user);
-		return werewolfSessionKey;
+		String numbergameSessionKey = SessionKeyUtil.generateSessionKey();
+		usersMap.put(numbergameSessionKey, user);
+		return numbergameSessionKey;
 	}
 
 	/**
-	 * 根据werewolfSessionKey获取当前用户信息
-	 * @param werewolfSessionKey
+	 * 根据sessionKey获取当前用户信息
+	 * @param numbergameSessionKey
 	 * @return
 	 */
-	public UserDO getUser(String werewolfSessionKey) {
-		UserDO user = usersMap.get(werewolfSessionKey);
+	public UserDO getUser(String numbergameSessionKey) {
+		UserDO user = usersMap.get(numbergameSessionKey);
 		return user;
 	}
 

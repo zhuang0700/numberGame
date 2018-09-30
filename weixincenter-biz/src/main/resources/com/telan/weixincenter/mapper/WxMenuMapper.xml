@@ -3,13 +3,13 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.base.WxMenuMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.base.WxMenuDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="menu_name" property="menuName" jdbcType="VARCHAR" />
-    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-    <result column="material_id" property="materialId" jdbcType="BIGINT" />
-    <result column="content" property="content" jdbcType="VARCHAR" />
-    <result column="state" property="state" jdbcType="INTEGER" />
-    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-	<result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <progress column="menu_name" property="menuName" jdbcType="VARCHAR" />
+    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+    <progress column="material_id" property="materialId" jdbcType="BIGINT" />
+    <progress column="content" property="content" jdbcType="VARCHAR" />
+    <progress column="state" property="state" jdbcType="INTEGER" />
+    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+	<progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, menu_name, wx_merchant_id, material_id, content, state,gmt_created,gmt_modified

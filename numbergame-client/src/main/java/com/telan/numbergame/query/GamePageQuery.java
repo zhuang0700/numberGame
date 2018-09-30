@@ -13,11 +13,13 @@ public class GamePageQuery extends PageQuery {
 
     private List<Integer> statusList;
 
-    private Long creatorId;
+    private Long userId;
 
     private Integer type;
 
-    private Integer result;
+    private Integer progress;
+
+    private Long gameId;
 
     public List<Long> getIds() {
         return ids;
@@ -35,20 +37,20 @@ public class GamePageQuery extends PageQuery {
         this.statusList = statusList;
     }
 
-    public Long getCreatorId() {
-        return creatorId;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setCreatorId(Long creatorId) {
-        this.creatorId = creatorId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public Integer getResult() {
-        return result;
+    public Integer getProgress() {
+        return progress;
     }
 
-    public void setResult(Integer result) {
-        this.result = result;
+    public void setProgress(Integer progress) {
+        this.progress = progress;
     }
 
     public Integer getType() {
@@ -57,5 +59,13 @@ public class GamePageQuery extends PageQuery {
 
     public void setType(Integer type) {
         this.type = type;
+    }
+
+    public Long getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(Long gameId) {
+        this.gameId = gameId;
     }
 }

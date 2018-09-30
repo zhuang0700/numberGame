@@ -1,29 +1,19 @@
 package com.telan.numbergame.manager;
 
 import com.telan.numbergame.domain.GameDO;
-import com.telan.numbergame.domain.PlayerDO;
-import com.telan.numbergame.domain.UserDO;
 import com.telan.numbergame.enums.BaseStatus;
 import com.telan.numbergame.enums.WeErrorCode;
-import com.telan.numbergame.game.domain.Player;
 import com.telan.numbergame.game.enums.GameStatus;
-import com.telan.numbergame.game.domain.GameInfo;
 import com.telan.numbergame.mapper.GameDOMapper;
 import com.telan.numbergame.query.GamePageQuery;
-import com.telan.numbergame.query.GameQueryOption;
-import com.telan.numbergame.query.PlayerPageQuery;
 import com.telan.numbergame.result.WeBaseResult;
 import com.telan.numbergame.result.WePageResult;
-import com.telan.numbergame.utils.conventor.GameConvertor;
-import com.telan.numbergame.utils.conventor.PlayerConvertor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.connection.convert.ListConverter;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by weiwenliang on 15/11/3.

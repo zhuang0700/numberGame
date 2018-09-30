@@ -7,7 +7,7 @@ import com.telan.numbergame.domain.UserDO;
  */
 public class CreateGameParam {
     private UserDO creator;
-    private int playerNum;
+    private long gameId;
 
     public UserDO getCreator() {
         return creator;
@@ -17,11 +17,11 @@ public class CreateGameParam {
         this.creator = creator;
     }
 
-    public int getPlayerNum() {
-        return playerNum;
+    public long getGameId() {
+        return gameId;
     }
 
-    public void setPlayerNum(int playerNum) {
-        this.playerNum = playerNum;
+    public void setGameId(long gameId) {
+        this.gameId = gameId;
     }
 }

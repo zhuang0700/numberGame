@@ -4,24 +4,24 @@
 	<resultMap id="BaseResultMap"
 		type="com.telan.weixincenter.domain.base.WxMerchantDO">
 		<id column="id" property="id" jdbcType="BIGINT" />
-		<result column="info_name" property="infoName" jdbcType="VARCHAR" />
-		<result column="info_logo" property="infoLogo" jdbcType="VARCHAR" />
-		<result column="weixin_id" property="weixinId" jdbcType="VARCHAR" />
-		<result column="account_type" property="accountType" jdbcType="INTEGER" />
-		<result column="certification" property="certification" jdbcType="INTEGER" />
-		<result column="app_id" property="appId" jdbcType="VARCHAR" />
-		<result column="app_secret" property="appSecret" jdbcType="VARCHAR" />
-		<result column="app_state" property="appState" jdbcType="INTEGER" />
-		<result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-		<result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
-		<result column="employee_id" property="employeeId" jdbcType="BIGINT" />
-		<result column="open_id" property="openId" jdbcType="VARCHAR" />
-		<result column="state" property="state" jdbcType="INTEGER" />
-		<result column="pcEnabledKef" property="pcenabledkef" jdbcType="INTEGER" />
-		<result column="version" property="version" jdbcType="BIGINT" />
-		<result column="merchant_id" property="merchantId" jdbcType="BIGINT" />
-		<result column="domain_id" property="domainId" jdbcType="BIGINT" />
-		<result column="domain_app_id" property="domainAppId" jdbcType="BIGINT" />
+		<progress column="info_name" property="infoName" jdbcType="VARCHAR" />
+		<progress column="info_logo" property="infoLogo" jdbcType="VARCHAR" />
+		<progress column="weixin_id" property="weixinId" jdbcType="VARCHAR" />
+		<progress column="account_type" property="accountType" jdbcType="INTEGER" />
+		<progress column="certification" property="certification" jdbcType="INTEGER" />
+		<progress column="app_id" property="appId" jdbcType="VARCHAR" />
+		<progress column="app_secret" property="appSecret" jdbcType="VARCHAR" />
+		<progress column="app_state" property="appState" jdbcType="INTEGER" />
+		<progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+		<progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+		<progress column="employee_id" property="employeeId" jdbcType="BIGINT" />
+		<progress column="open_id" property="openId" jdbcType="VARCHAR" />
+		<progress column="state" property="state" jdbcType="INTEGER" />
+		<progress column="pcEnabledKef" property="pcenabledkef" jdbcType="INTEGER" />
+		<progress column="version" property="version" jdbcType="BIGINT" />
+		<progress column="merchant_id" property="merchantId" jdbcType="BIGINT" />
+		<progress column="domain_id" property="domainId" jdbcType="BIGINT" />
+		<progress column="domain_app_id" property="domainAppId" jdbcType="BIGINT" />
 	</resultMap>
 	<sql id="Base_Column_List">
 		id, info_name, info_logo, weixin_id, account_type,

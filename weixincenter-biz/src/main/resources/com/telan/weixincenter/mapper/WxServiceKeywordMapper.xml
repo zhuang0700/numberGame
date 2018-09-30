@@ -4,13 +4,13 @@
 	<resultMap id="BaseResultMap"
 		type="com.telan.weixincenter.domain.base.WxServiceKeywordDO">
 		<id column="id" property="id" jdbcType="BIGINT" />
-		<result column="keyword_name" property="keywordName" jdbcType="VARCHAR" />
-		<result column="keyword_content" property="keywordContent"
+		<progress column="keyword_name" property="keywordName" jdbcType="VARCHAR" />
+		<progress column="keyword_content" property="keywordContent"
 			jdbcType="VARCHAR" />
-		<result column="rule_id" property="ruleId" jdbcType="BIGINT" />
-		<result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-		<result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
-		<result column="reserve" property="reserve" jdbcType="VARCHAR" />
+		<progress column="rule_id" property="ruleId" jdbcType="BIGINT" />
+		<progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+		<progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+		<progress column="reserve" property="reserve" jdbcType="VARCHAR" />
 	</resultMap>
 	<sql id="Base_Column_List">
 		id, keyword_name, keyword_content, rule_id, gmt_created,gmt_modified,
