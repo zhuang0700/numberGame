@@ -1,22 +1,14 @@
 package com.telan.numbergame.service;
 
 import com.telan.numbergame.domain.GameDO;
-import com.telan.numbergame.enums.BaseStatus;
 import com.telan.numbergame.enums.WeErrorCode;
-import com.telan.numbergame.game.enums.GameStatus;
 import com.telan.numbergame.game.param.OperateGameParam;
 import com.telan.numbergame.manager.GameManager;
-import com.telan.numbergame.query.GamePageQuery;
 import com.telan.numbergame.result.WeBaseResult;
-import com.telan.numbergame.result.WePageResult;
 import com.telan.numbergame.result.WeResultSupport;
-import com.telan.numbergame.utils.ResponseMapUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * Created by weiwenliang on 15/11/3.
@@ -37,6 +29,16 @@ public class GameService {
 		if(param.getProgress() != null) {
 			gameDO.setProgress(param.getProgress());
 		}
+		if(param.getStatus() != null) {
+			gameDO.setStatus(param.getStatus());
+		}
+		if(param.getScore() != null) {
+			gameDO.setScore(param.getScore());
+		}
+		if(gameManager.updateGameById(gameDO)) {
+			return new WeResultSupport(true);
+		}
+		return new WeResultSupport(WeErrorCode.WRITE_DB_ERROR);
 	}
 
 }

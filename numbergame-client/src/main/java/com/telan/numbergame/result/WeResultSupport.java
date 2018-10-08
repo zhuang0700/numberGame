@@ -20,6 +20,17 @@ public class WeResultSupport implements Serializable {
 
     }
 
+    public WeResultSupport(boolean success){
+        this.success = true;
+        this.errorCode = 0;
+    }
+
+    public WeResultSupport(WeErrorCode weErrorCode){
+        this.success = false;
+        this.errorCode = weErrorCode.getErrorCode();
+        this.resultMsg = weErrorCode.getErrorMsg();
+    }
+
     public boolean isSuccess() {
         return success;
     }

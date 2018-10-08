@@ -13,13 +13,6 @@
     </bean>
     <bean id="userManager" class="com.telan.numbergame.manager.UserManager"/>
     <bean id="gameManager" class="com.telan.numbergame.manager.GameManager"/>
-    <bean id="playerManager" class="com.telan.numbergame.manager.PlayerManager"/>
-    <bean id="gameProcessor" class="com.telan.numbergame.game.process.GameProcessor" init-method="loadAllLiveGame"/>
-    <bean id="memGameManager" class="com.telan.numbergame.manager.MemGameManager" destroy-method="destroy">
-    </bean>
-    <bean id="actionEngine" class="com.telan.numbergame.game.manager.ActionEngine"/>
-    <bean id="roleEngine" class="com.telan.numbergame.game.manager.RoleEngine"/>
-    <bean id="roundEngine" class="com.telan.numbergame.game.manager.RoundEngine"/>
-    <bean id="playerEngine" class="com.telan.numbergame.game.manager.PlayerEngine"/>
-    <bean id="recordEngine" class="com.telan.numbergame.game.manager.RecordEngine"/>
+    <bean id="gameService" class="com.telan.numbergame.service.GameService"/>
+
 </beans>

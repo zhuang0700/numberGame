@@ -11,7 +11,7 @@ public class OperateGameParam extends GameBaseRequest{
 
     private Integer status;
 
-    private Long progress;
+    private Integer progress;
 
     private Long score;
 
@@ -31,11 +31,11 @@ public class OperateGameParam extends GameBaseRequest{
         this.status = status;
     }
 
-    public Long getProgress() {
+    public Integer getProgress() {
         return progress;
     }
 
-    public void setProgress(Long progress) {
+    public void setProgress(Integer progress) {
         this.progress = progress;
     }
 

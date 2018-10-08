@@ -67,11 +67,12 @@ public class GameController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "/updateProgress", method=RequestMethod.POST )
-	@LoginRequired
+	@RequestMapping(value = "/updateProgress", method=RequestMethod.GET )
+//	@LoginRequired
 	public Map updateProgress(@RequestBody OperateGameParam param, ModelMap modelMap) throws IOException
 	{
-
+		Map map = new HashMap();
+		map.put("success", "true");
 		return map;
 	}
 
