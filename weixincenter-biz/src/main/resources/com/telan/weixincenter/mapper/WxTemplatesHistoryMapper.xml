@@ -3,14 +3,14 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.templates.WxTemplatesHistoryMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.templates.WxTemplatesHistoryDO" >
     <id column="mass_history_id" property="massHistoryId" jdbcType="BIGINT" />
-    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-    <progress column="templatename" property="templatename" jdbcType="VARCHAR" />
-    <progress column="sendtotals" property="sendtotals" jdbcType="INTEGER" />
-    <progress column="arrivedtotals" property="arrivedtotals" jdbcType="INTEGER" />
-    <progress column="templateid" property="templateid" jdbcType="VARCHAR" />
-    <progress column="failemsg" property="failemsg" jdbcType="VARCHAR" />
-    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+    <result column="templatename" property="templatename" jdbcType="VARCHAR" />
+    <result column="sendtotals" property="sendtotals" jdbcType="INTEGER" />
+    <result column="arrivedtotals" property="arrivedtotals" jdbcType="INTEGER" />
+    <result column="templateid" property="templateid" jdbcType="VARCHAR" />
+    <result column="failemsg" property="failemsg" jdbcType="VARCHAR" />
+    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     mass_history_id, wx_merchant_id, templatename, sendtotals, arrivedtotals, templateid, failemsg, 

@@ -3,13 +3,13 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.templates.WxTemplatesItemMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.templates.WxTemplatesItemDO" >
     <id column="template_item_id" property="templateItemId" jdbcType="BIGINT" />
-    <progress column="template_id" property="templateId" jdbcType="BIGINT" />
-    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="INTEGER" />
-    <progress column="field_name" property="fieldName" jdbcType="VARCHAR" />
-    <progress column="field_value" property="fieldValue" jdbcType="VARCHAR" />
-    <progress column="field_color" property="fieldColor" jdbcType="VARCHAR" />
-    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="template_id" property="templateId" jdbcType="BIGINT" />
+    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="INTEGER" />
+    <result column="field_name" property="fieldName" jdbcType="VARCHAR" />
+    <result column="field_value" property="fieldValue" jdbcType="VARCHAR" />
+    <result column="field_color" property="fieldColor" jdbcType="VARCHAR" />
+    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     template_item_id, template_id, wx_merchant_id, field_name, field_value, field_color, gmt_created,gmt_modified

@@ -4,34 +4,34 @@
 	<resultMap id="BaseResultMap"
 		type="com.telan.weixincenter.domain.base.WxSubscribeDO">
 		<id column="id" jdbcType="BIGINT" property="id" />
-		<progress column="subscribe" jdbcType="INTEGER" property="subscribe" />
-		<progress column="open_id" jdbcType="VARCHAR" property="openId" />
-		<progress column="nick_name" jdbcType="VARCHAR" property="nickName" />
-		<progress column="sex" jdbcType="VARCHAR" property="sex" />
-		<progress column="birthdays" jdbcType="VARCHAR" property="birthdays" />
-		<progress column="language" jdbcType="VARCHAR" property="language" />
-		<progress column="city" jdbcType="VARCHAR" property="city" />
-		<progress column="province" jdbcType="VARCHAR" property="province" />
-		<progress column="country" jdbcType="VARCHAR" property="country" />
-		<progress column="headimgurl" jdbcType="VARCHAR" property="headimgurl" />
-		<progress column="subscribe_time" jdbcType="TIMESTAMP" property="subscribeTime" />
-		<progress column="remark" jdbcType="VARCHAR" property="remark" />
-		<progress column="source" jdbcType="INTEGER" property="source" />
-		<progress column="channel_id" jdbcType="BIGINT" property="channelId" />
-		<progress column="integral" jdbcType="INTEGER" property="integral" />
-		<progress column="level" jdbcType="VARCHAR" property="level" />
-		<progress column="application_time" jdbcType="TIMESTAMP" property="applicationTime" />
-		<progress column="use_time" jdbcType="TIMESTAMP" property="useTime" />
-		<progress column="phone_num" jdbcType="VARCHAR" property="phoneNum" />
-		<progress column="company_name" jdbcType="VARCHAR" property="companyName" />
-		<progress column="vip_num" jdbcType="VARCHAR" property="vipNum" />
-		<progress column="vip_name" jdbcType="VARCHAR" property="vipName" />
-		<progress column="wx_merchant_id" jdbcType="BIGINT" property="wxMerchantId" />
-		<progress column="cancel_attention_time" property="cancelAttentionTime"
+		<result column="subscribe" jdbcType="INTEGER" property="subscribe" />
+		<result column="open_id" jdbcType="VARCHAR" property="openId" />
+		<result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+		<result column="sex" jdbcType="VARCHAR" property="sex" />
+		<result column="birthdays" jdbcType="VARCHAR" property="birthdays" />
+		<result column="language" jdbcType="VARCHAR" property="language" />
+		<result column="city" jdbcType="VARCHAR" property="city" />
+		<result column="province" jdbcType="VARCHAR" property="province" />
+		<result column="country" jdbcType="VARCHAR" property="country" />
+		<result column="headimgurl" jdbcType="VARCHAR" property="headimgurl" />
+		<result column="subscribe_time" jdbcType="TIMESTAMP" property="subscribeTime" />
+		<result column="remark" jdbcType="VARCHAR" property="remark" />
+		<result column="source" jdbcType="INTEGER" property="source" />
+		<result column="channel_id" jdbcType="BIGINT" property="channelId" />
+		<result column="integral" jdbcType="INTEGER" property="integral" />
+		<result column="level" jdbcType="VARCHAR" property="level" />
+		<result column="application_time" jdbcType="TIMESTAMP" property="applicationTime" />
+		<result column="use_time" jdbcType="TIMESTAMP" property="useTime" />
+		<result column="phone_num" jdbcType="VARCHAR" property="phoneNum" />
+		<result column="company_name" jdbcType="VARCHAR" property="companyName" />
+		<result column="vip_num" jdbcType="VARCHAR" property="vipNum" />
+		<result column="vip_name" jdbcType="VARCHAR" property="vipName" />
+		<result column="wx_merchant_id" jdbcType="BIGINT" property="wxMerchantId" />
+		<result column="cancel_attention_time" property="cancelAttentionTime"
 			jdbcType="TIMESTAMP" />
-		<progress column="gmt_created" jdbcType="TIMESTAMP" property="gmtCreated" />
-		<progress column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
-		<progress column="user_id" jdbcType="BIGINT" property="userId" />
+		<result column="gmt_created" jdbcType="TIMESTAMP" property="gmtCreated" />
+		<result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+		<result column="user_id" jdbcType="BIGINT" property="userId" />
 	</resultMap>
 	<sql id="Base_Column_List">
 		id, subscribe, open_id, nick_name, sex, birthdays, language, city,

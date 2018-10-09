@@ -3,18 +3,18 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.base.WxMenuItemMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.base.WxMenuItemDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <progress column="menu_id" property="menuId" jdbcType="BIGINT" />
-    <progress column="item_name" property="itemName" jdbcType="VARCHAR" />
-    <progress column="material_id" property="materialId" jdbcType="BIGINT" />
-    <progress column="content" property="content" jdbcType="VARCHAR" />
-    <progress column="material_name" property="materialName" jdbcType="VARCHAR" />
-    <progress column="material_type_id" property="materialTypeId" jdbcType="INTEGER" />
-    <progress column="material_url" property="materialUrl" jdbcType="VARCHAR" />
-    <progress column="activity_id" property="activityId" jdbcType="BIGINT" />
-    <progress column="scratchcard_name" property="scratchcardName" jdbcType="VARCHAR" />
-    <progress column="text" property="text" jdbcType="VARCHAR" />
-    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-	<progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="menu_id" property="menuId" jdbcType="BIGINT" />
+    <result column="item_name" property="itemName" jdbcType="VARCHAR" />
+    <result column="material_id" property="materialId" jdbcType="BIGINT" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="material_name" property="materialName" jdbcType="VARCHAR" />
+    <result column="material_type_id" property="materialTypeId" jdbcType="INTEGER" />
+    <result column="material_url" property="materialUrl" jdbcType="VARCHAR" />
+    <result column="activity_id" property="activityId" jdbcType="BIGINT" />
+    <result column="scratchcard_name" property="scratchcardName" jdbcType="VARCHAR" />
+    <result column="text" property="text" jdbcType="VARCHAR" />
+    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+	<result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, menu_id, item_name, material_id, content, material_name, material_type_id, 

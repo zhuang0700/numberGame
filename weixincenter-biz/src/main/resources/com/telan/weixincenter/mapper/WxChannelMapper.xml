@@ -3,34 +3,34 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.channel.WxChannelMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.channel.WxChannelDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-    <progress column="channel_name" property="channelName" jdbcType="VARCHAR" />
-    <progress column="channel_type" property="channelType" jdbcType="INTEGER" />
-    <progress column="channel_p" property="channelP" jdbcType="VARCHAR" />
-    <progress column="channel_c" property="channelC" jdbcType="VARCHAR" />
-    <progress column="channel_a" property="channelA" jdbcType="VARCHAR" />
-    <progress column="channel_address" property="channelAddress" jdbcType="VARCHAR" />
-    <progress column="channel_class_id" property="channelClassId" jdbcType="INTEGER" />
-    <progress column="channel_code_img" property="channelCodeImg" jdbcType="VARCHAR" />
-    <progress column="channel_logo" property="channelLogo" jdbcType="VARCHAR" />
-    <progress column="channel_url" property="channelUrl" jdbcType="VARCHAR" />
-    <progress column="channelbeizhu" property="channelbeizhu" jdbcType="VARCHAR" />
-    <progress column="total_nums" property="totalNums" jdbcType="INTEGER" />
-    <progress column="total_cancel_num" property="totalCancelNum" jdbcType="INTEGER" />
-    <progress column="delete_type" property="deleteType" jdbcType="INTEGER" />
-    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+    <result column="channel_name" property="channelName" jdbcType="VARCHAR" />
+    <result column="channel_type" property="channelType" jdbcType="INTEGER" />
+    <result column="channel_p" property="channelP" jdbcType="VARCHAR" />
+    <result column="channel_c" property="channelC" jdbcType="VARCHAR" />
+    <result column="channel_a" property="channelA" jdbcType="VARCHAR" />
+    <result column="channel_address" property="channelAddress" jdbcType="VARCHAR" />
+    <result column="channel_class_id" property="channelClassId" jdbcType="INTEGER" />
+    <result column="channel_code_img" property="channelCodeImg" jdbcType="VARCHAR" />
+    <result column="channel_logo" property="channelLogo" jdbcType="VARCHAR" />
+    <result column="channel_url" property="channelUrl" jdbcType="VARCHAR" />
+    <result column="channelbeizhu" property="channelbeizhu" jdbcType="VARCHAR" />
+    <result column="total_nums" property="totalNums" jdbcType="INTEGER" />
+    <result column="total_cancel_num" property="totalCancelNum" jdbcType="INTEGER" />
+    <result column="delete_type" property="deleteType" jdbcType="INTEGER" />
+    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
     <collection property="wxChannelClass" javaType="com.telan.weixincenter.domain.channel.WxChannelClassDO">
 		<id column="id" property="id" jdbcType="BIGINT" />
-	    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-	    <progress column="channel_class_name" property="channelClassName" jdbcType="VARCHAR" />
-	    <progress column="order_num" property="orderNum" jdbcType="INTEGER" />
-	    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    	<progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+	    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+	    <result column="channel_class_name" property="channelClassName" jdbcType="VARCHAR" />
+	    <result column="order_num" property="orderNum" jdbcType="INTEGER" />
+	    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    	<result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
 	</collection>
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.telan.weixincenter.domain.channel.WxChannelDO" extends="BaseResultMap" >
-    <progress column="channel_remark" property="channelRemark" jdbcType="LONGVARCHAR" />
+    <result column="channel_remark" property="channelRemark" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, wx_merchant_id, channel_name, channel_type, channel_p, channel_c, channel_a, 

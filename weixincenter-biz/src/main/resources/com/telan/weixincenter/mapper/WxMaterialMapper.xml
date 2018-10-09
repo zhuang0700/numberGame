@@ -4,37 +4,37 @@
 	<resultMap id="BaseResultMap"
 		type="com.telan.weixincenter.domain.base.WxMaterialDO">
 		<id column="id" property="id" jdbcType="BIGINT" />
-		<progress column="material_writer" property="materialWriter"
+		<result column="material_writer" property="materialWriter"
 			jdbcType="VARCHAR" />
-		<progress column="material_title" property="materialTitle"
+		<result column="material_title" property="materialTitle"
 			jdbcType="VARCHAR" />
-		<progress column="material_img_url" property="materialImgUrl"
+		<result column="material_img_url" property="materialImgUrl"
 			jdbcType="VARCHAR" />
-		<progress column="material_img_is_show" property="materialImgIsShow"
+		<result column="material_img_is_show" property="materialImgIsShow"
 			jdbcType="INTEGER" />
-		<progress column="material_digest" property="materialDigest"
+		<result column="material_digest" property="materialDigest"
 			jdbcType="VARCHAR" />
-		<progress column="business_select_type" property="businessSelectType"
+		<result column="business_select_type" property="businessSelectType"
 			jdbcType="VARCHAR" />
-		<progress column="material_source_url" property="materialSourceUrl"
+		<result column="material_source_url" property="materialSourceUrl"
 			jdbcType="VARCHAR" />
-		<progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-		<progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
-		<progress column="material_type_id" property="materialTypeId"
+		<result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+		<result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+		<result column="material_type_id" property="materialTypeId"
 			jdbcType="INTEGER" />
-		<progress column="material_next_id" property="materialNextId"
+		<result column="material_next_id" property="materialNextId"
 			jdbcType="BIGINT" />
-		<progress column="wx_merchant_id" property="wxMerchantId"
+		<result column="wx_merchant_id" property="wxMerchantId"
 			jdbcType="BIGINT" />
-		<progress column="status" property="status" jdbcType="INTEGER" />
-		<progress column="material_addr" property="materialAddr"
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="material_addr" property="materialAddr"
 			jdbcType="VARCHAR" />
 	</resultMap>
 	<resultMap id="ResultMapWithBLOBs"
 		type="com.telan.weixincenter.domain.base.WxMaterialDO" extends="BaseResultMap">
-		<progress column="material_text" property="materialText"
+		<result column="material_text" property="materialText"
 			jdbcType="LONGVARCHAR" />
-		<progress column="material_link_url" property="materialLinkUrl"
+		<result column="material_link_url" property="materialLinkUrl"
 			jdbcType="LONGVARCHAR" />
 	</resultMap>
 	<sql id="Base_Column_List">

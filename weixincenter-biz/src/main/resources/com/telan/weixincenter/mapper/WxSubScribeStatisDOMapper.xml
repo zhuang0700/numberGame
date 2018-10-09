@@ -3,14 +3,14 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.channel.WxSubScribeStatisDOMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.channel.SubScribeStatisDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <progress column="day" property="day" jdbcType="DATE" />
-    <progress column="channel_id" property="channelId" jdbcType="BIGINT" />
-    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-    <progress column="channel_name" property="channelName" jdbcType="VARCHAR" />
-    <progress column="subscribe_num" property="subscribeNum" jdbcType="INTEGER" />
-    <progress column="cancel_subscribe_num" property="cancelSubscribeNum" jdbcType="INTEGER" />
-    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="day" property="day" jdbcType="DATE" />
+    <result column="channel_id" property="channelId" jdbcType="BIGINT" />
+    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+    <result column="channel_name" property="channelName" jdbcType="VARCHAR" />
+    <result column="subscribe_num" property="subscribeNum" jdbcType="INTEGER" />
+    <result column="cancel_subscribe_num" property="cancelSubscribeNum" jdbcType="INTEGER" />
+    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, day, channel_id,wx_merchant_id, channel_name, subscribe_num, cancel_subscribe_num, gmt_created, 

@@ -3,11 +3,11 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.fans.WxFansGroupMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.fans.WxFansGroupDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-    <progress column="group_name" property="groupName" jdbcType="VARCHAR" />
-    <progress column="fans_count" property="fansCount" jdbcType="INTEGER" />
-    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+    <result column="group_name" property="groupName" jdbcType="VARCHAR" />
+    <result column="fans_count" property="fansCount" jdbcType="INTEGER" />
+    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, wx_merchant_id, group_name, fans_count, gmt_created,gmt_modified

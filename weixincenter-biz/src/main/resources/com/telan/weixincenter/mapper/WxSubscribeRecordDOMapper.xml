@@ -3,22 +3,22 @@
 <mapper namespace="com.joyweekend.weixincenter.mapper.channel.WxSubscribeRecordDOMapper" >
   <resultMap id="BaseResultMap" type="com.telan.weixincenter.domain.channel.SubscribeRecordDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <progress column="channel_id" property="channelId" jdbcType="BIGINT" />
-    <progress column="open_id" property="openId" jdbcType="VARCHAR" />
-    <progress column="subscribe" property="subscribe" jdbcType="TINYINT" />
-    <progress column="from_type" property="fromType" jdbcType="BIGINT" />
-    <progress column="day" property="day" jdbcType="DATE" />
-    <progress column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
-    <progress column="record_time" property="recordTime" jdbcType="TIMESTAMP" />
-    <progress column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
-    <progress column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
-    <progress column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="channel_id" property="channelId" jdbcType="BIGINT" />
+    <result column="open_id" property="openId" jdbcType="VARCHAR" />
+    <result column="subscribe" property="subscribe" jdbcType="TINYINT" />
+    <result column="from_type" property="fromType" jdbcType="BIGINT" />
+    <result column="day" property="day" jdbcType="DATE" />
+    <result column="wx_merchant_id" property="wxMerchantId" jdbcType="BIGINT" />
+    <result column="record_time" property="recordTime" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, channel_id, open_id, subscribe, from_type, day, wx_merchant_id, record_time, gmt_modified, gmt_created,user_id
   </sql>
   <resultMap id="BaseResultMapForChannelId" type="com.telan.weixincenter.domain.channel.SubScribeRecordGroupDO" >
-    <progress column="channel_id" property="channelId" jdbcType="BIGINT" />
+    <result column="channel_id" property="channelId" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_channelId_List" >
     channel_id
