@@ -6,7 +6,7 @@
 	<bean id="numberDataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		  destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="${db.url}"/>
+		<property name="url" value="${numbergame.db.url}"/>
 		<property name="username" value="${db.username}"/>
 		<property name="password" value="${db.password}"/>
 	</bean>
@@ -14,7 +14,7 @@
 	<!-- 配置ibatis映射信息 -->
 	<bean id="numberSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="numberDataSource"/>
-		<property name="mapperLocations" value="classpath:com.telan.numbergame/mapper/*.xml"/>
+		<property name="mapperLocations" value="classpath:com/telan/numbergame/mapper/*.xml"/>
 		<property name="typeAliasesPackage" value="com.telan.numbergame.domain"/>
 	</bean>
 
