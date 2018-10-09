@@ -27,6 +27,8 @@
 		<javaClientGenerator targetPackage="com.telan.numbergame.mapper"
 			targetProject="../numbergame-biz/src/main/java" type="XMLMAPPER" />
 
+		<!--运行命令 mvn mybatis-generator:generate-->
+
 		<!--<table tableName="user" domainObjectName="UserDO" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
 			   <!--enableSelectByExample="false" selectByExampleQueryId="false">-->
 			<!--<generatedKey column="id" sqlStatement="JDBC" />-->
@@ -34,29 +36,39 @@
 			<!--<columnOverride column="status" javaType="int" />-->
 		<!--</table>-->
 
-		<table tableName="player" domainObjectName="PlayerDO" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		<!--<table tableName="player" domainObjectName="PlayerDO" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false">-->
+			<!--<generatedKey column="id" sqlStatement="JDBC" />-->
+			<!--<columnOverride column="id" javaType="long" />-->
+			<!--<columnOverride column="user_id" javaType="long" />-->
+			<!--<columnOverride column="game_id" javaType="long" />-->
+			<!--<columnOverride column="options" javaType="long" />-->
+			<!--<columnOverride column="status" javaType="int" />-->
+			<!--<columnOverride column="type" javaType="int" />-->
+			<!--<columnOverride column="status" javaType="int" />-->
+			<!--<columnOverride column="role" javaType="int" />-->
+		<!--</table>-->
+
+		<!--<table tableName="game" domainObjectName="GameDO" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+			   <!--enableSelectByExample="false" selectByExampleQueryId="false">-->
+			<!--<generatedKey column="id" sqlStatement="JDBC" />-->
+			<!--<columnOverride column="id" javaType="long" />-->
+			<!--<columnOverride column="creator_id" javaType="long" />-->
+			<!--<columnOverride column="has_judge" javaType="int" />-->
+			<!--<columnOverride column="status" javaType="int" />-->
+			<!--<columnOverride column="type" javaType="int" />-->
+			<!--<columnOverride column="player_num" javaType="int" />-->
+		<!--</table>-->
+
+		<table tableName="game_progress" domainObjectName="GameProgressDO" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
 			   enableSelectByExample="false" selectByExampleQueryId="false">
 			<generatedKey column="id" sqlStatement="JDBC" />
 			<columnOverride column="id" javaType="long" />
 			<columnOverride column="user_id" javaType="long" />
 			<columnOverride column="game_id" javaType="long" />
-			<columnOverride column="options" javaType="long" />
 			<columnOverride column="status" javaType="int" />
-			<columnOverride column="type" javaType="int" />
-			<columnOverride column="status" javaType="int" />
-			<columnOverride column="role" javaType="int" />
+			<columnOverride column="progress" javaType="int" />
+			<columnOverride column="score" javaType="long" />
 		</table>
-
-		<table tableName="game" domainObjectName="GameDO" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
-			   enableSelectByExample="false" selectByExampleQueryId="false">
-			<generatedKey column="id" sqlStatement="JDBC" />
-			<columnOverride column="id" javaType="long" />
-			<columnOverride column="creator_id" javaType="long" />
-			<columnOverride column="has_judge" javaType="int" />
-			<columnOverride column="status" javaType="int" />
-			<columnOverride column="type" javaType="int" />
-			<columnOverride column="player_num" javaType="int" />
-		</table>
-
 	</context>
 </generatorConfiguration>
