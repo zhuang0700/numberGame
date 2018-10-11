@@ -17,11 +17,11 @@
 <%
 
 	WebApplicationContext wac = WebApplicationContextUtils.getWebApplicationContext(request.getServletContext());
-	long gameId = 0, fromId= 3, toId=2;
+	long gameTypeId = 0, fromId= 3, toId=2;
 	String actionType = "";
 	PrintWriter write = response.getWriter();
 	try {
-		gameId = Long.valueOf(request.getParameter("gameId"));
+		gameTypeId = Long.valueOf(request.getParameter("gameTypeId"));
 	} catch (NumberFormatException e) {
 	}
 	try {

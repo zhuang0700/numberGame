@@ -2,10 +2,8 @@ package com.telan.numbergame.utils.conventor;
 
 import com.telan.numbergame.domain.GameDO;
 import com.telan.numbergame.domain.UserDO;
-import com.telan.numbergame.game.enums.GameStatus;
 import com.telan.numbergame.game.param.CreateGameParam;
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.util.CollectionUtils;
 
 import java.util.*;
 
@@ -18,7 +16,7 @@ public class GameConvertor{
     public static GameDO convertGameDOForCreate(CreateGameParam param) {
         GameDO gameDO = new GameDO();
         UserDO userDO = param.getCreator();
-        gameDO.setGameId(userDO.getId());
+        gameDO.setGameTypeId(userDO.getId());
         gameDO.setGmtCreated(new Date());
         gameDO.setGmtModified(new Date());
         gameDO.setType(1);

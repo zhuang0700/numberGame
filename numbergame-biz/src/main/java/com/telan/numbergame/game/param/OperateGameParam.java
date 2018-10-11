@@ -15,6 +15,12 @@ public class OperateGameParam extends GameBaseRequest{
 
     private Long score;
 
+    private String gameExtra;
+
+    private Integer operateType;
+
+    private Integer gameType;
+
     public UserDO getUser() {
         return user;
     }
@@ -45,5 +51,29 @@ public class OperateGameParam extends GameBaseRequest{
 
     public void setScore(Long score) {
         this.score = score;
+    }
+
+    public String getGameExtra() {
+        return gameExtra;
+    }
+
+    public void setGameExtra(String gameExtra) {
+        this.gameExtra = gameExtra;
+    }
+
+    public Integer getOperateType() {
+        return operateType;
+    }
+
+    public void setOperateType(Integer operateType) {
+        this.operateType = operateType;
+    }
+
+    public Integer getGameType() {
+        return gameType;
+    }
+
+    public void setGameType(Integer gameType) {
+        this.gameType = gameType;
     }
 }

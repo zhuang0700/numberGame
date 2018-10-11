@@ -41,4 +41,24 @@ public class GameService {
 		return new WeResultSupport(WeErrorCode.WRITE_DB_ERROR);
 	}
 
+
+	public WeResultSupport createGame(OperateGameParam param) {
+
+		GameDO gameDO = new GameDO();
+
+		//TODO:
+		if(param.getProgress() != null) {
+			gameDO.setProgress(param.getProgress());
+		}
+		if(param.getStatus() != null) {
+			gameDO.setStatus(param.getStatus());
+		}
+		if(param.getScore() != null) {
+			gameDO.setScore(param.getScore());
+		}
+		if(gameManager.updateGameById(gameDO)) {
+			return new WeResultSupport(true);
+		}
+		return new WeResultSupport(WeErrorCode.WRITE_DB_ERROR);
+	}
 }

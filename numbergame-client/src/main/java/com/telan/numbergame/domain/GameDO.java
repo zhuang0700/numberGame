@@ -8,7 +8,7 @@ public class GameDO implements Serializable {
 
     private int type;
 
-    private long gameId;
+    private long gameTypeId;
 
     private long userId;
 
@@ -40,12 +40,12 @@ public class GameDO implements Serializable {
         this.type = type;
     }
 
-    public long getGameId() {
-        return gameId;
+    public long getGameTypeId() {
+        return gameTypeId;
     }
 
-    public void setGameId(long gameId) {
-        this.gameId = gameId;
+    public void setGameTypeId(long gameTypeId) {
+        this.gameTypeId = gameTypeId;
     }
 
     public int getStatus() {
