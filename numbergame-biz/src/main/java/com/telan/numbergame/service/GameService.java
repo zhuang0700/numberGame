@@ -6,6 +6,7 @@ import com.telan.numbergame.game.param.OperateGameParam;
 import com.telan.numbergame.manager.GameManager;
 import com.telan.numbergame.result.WeBaseResult;
 import com.telan.numbergame.result.WeResultSupport;
+import com.telan.numbergame.utils.conventor.GameConvertor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class GameService {
 	private final static Logger log	= LoggerFactory.getLogger(GameService.class);
 
 	public WeResultSupport updateGameProgress(OperateGameParam param) {
+		if(param.getGameId() <= 0) {
+			return createGame(param);
+		}
 		WeBaseResult<GameDO> gameDOResult = gameManager.getGameById(param.getGameId());
 		if(!gameDOResult.isSuccess() || gameDOResult.getValue() == null) {
 			return gameDOResult;
@@ -43,20 +47,9 @@ public class GameService {
 
 
 	public WeResultSupport createGame(OperateGameParam param) {
-
-		GameDO gameDO = new GameDO();
-
-		//TODO:
-		if(param.getProgress() != null) {
-			gameDO.setProgress(param.getProgress());
-		}
-		if(param.getStatus() != null) {
-			gameDO.setStatus(param.getStatus());
-		}
-		if(param.getScore() != null) {
-			gameDO.setScore(param.getScore());
-		}
-		if(gameManager.updateGameById(gameDO)) {
+		GameDO gameDO = GameConvertor.convertGameDOForOperator(param);
+		long gameId = gameManager.insertGame(gameDO);
+		if(gameId > 0) {
 			return new WeResultSupport(true);
 		}
 		return new WeResultSupport(WeErrorCode.WRITE_DB_ERROR);

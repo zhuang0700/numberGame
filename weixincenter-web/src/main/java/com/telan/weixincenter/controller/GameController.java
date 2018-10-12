@@ -3,6 +3,7 @@ package com.telan.weixincenter.controller;
 import com.alibaba.fastjson.JSON;
 import com.telan.numbergame.domain.GameDO;
 import com.telan.numbergame.manager.GameManager;
+import com.telan.numbergame.service.GameService;
 import com.telan.weixincenter.annotation.LoginRequired;
 import com.telan.weixincenter.event.EventAcceptor;
 import com.telan.weixincenter.manager.WxSessionManager;
@@ -41,6 +42,8 @@ public class GameController {
 	private UserManager userManager;
 	@Autowired
 	private GameManager gameManager;
+	@Autowired
+	private GameService gameService;
 //	@Autowired
 //	private WeixinApiUrlHolder weixinApiUrlHolder;
 	@Autowired
@@ -71,9 +74,8 @@ public class GameController {
 //	@LoginRequired
 	public Map updateProgress(@RequestBody OperateGameParam param, ModelMap modelMap) throws IOException
 	{
-		Map map = new HashMap();
-		map.put("success", "true");
-		return map;
+		WeResultSupport result = gameService.updateGameProgress(param);
+		return result.toMap();
 	}
 
 	@ResponseBody

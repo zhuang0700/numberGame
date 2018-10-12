@@ -78,13 +78,13 @@ public class GameManager {
 		return false;
 	}
 
-	public GameDO insertGame(GameDO gameDO) {
+	public long insertGame(GameDO gameDO) {
 		gameDO.setStatus(GameStatus.CREATE.getType());
 		Date now = new Date();
 		gameDO.setGmtCreated(now);
 		gameDO.setGmtModified(now);
-		int row = gameDOMapper.insert(gameDO);
-		return gameDO;
+		long gameId = gameDOMapper.insert(gameDO);
+		return gameId;
 	}
 
 }
