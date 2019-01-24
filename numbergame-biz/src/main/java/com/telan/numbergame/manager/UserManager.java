@@ -138,8 +138,8 @@ public class UserManager {
         if(dbUser == null) { //若不存在，注册
             dbUser = addUser(user);
         }
-        String wolfSessionKey = memSessionManager.addUser(sessionKey, dbUser);
-        return wolfSessionKey;
+        String wxSessionKey = memSessionManager.addUser(sessionKey, dbUser);
+        return wxSessionKey;
     }
 
     public List<UserDO> mockUserList(int num) {

@@ -19,6 +19,7 @@ import org.slf4j.LoggerFactory;
 import com.telan.weixincenter.annotation.LoginRequired;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class GlobalInterceptor extends HandlerInterceptorAdapter {
@@ -32,7 +33,8 @@ public class GlobalInterceptor extends HandlerInterceptorAdapter {
             throws Exception {
         HttpSession s=request.getSession();
         //角色权限控制访问
-        return loginControl(request, response, handler);
+//        return loginControl(request, response, handler);
+        return true;
     }
     /**角色权限控制访问*/
     private boolean loginControl(HttpServletRequest request,HttpServletResponse response, Object handler){
@@ -78,5 +80,10 @@ public class GlobalInterceptor extends HandlerInterceptorAdapter {
         }
         return true;
     }
- 
+
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)
+            throws Exception {
+        HttpSession s=request.getSession();
+    }
 }

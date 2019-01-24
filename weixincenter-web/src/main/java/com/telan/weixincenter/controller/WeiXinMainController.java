@@ -1,5 +1,6 @@
 package com.telan.weixincenter.controller;
 
+import com.telan.weixincenter.annotation.LoginRequired;
 import com.telan.weixincenter.domain.user.UserSessionInfo;
 import com.telan.weixincenter.event.EventAcceptor;
 import com.telan.weixincenter.manager.WxSessionManager;
@@ -11,6 +12,7 @@ import com.telan.numbergame.enums.BaseStatus;
 import com.telan.numbergame.manager.MemSessionManager;
 import com.telan.numbergame.manager.UserManager;
 import org.apache.commons.io.IOUtils;
+import org.apache.http.entity.ContentType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,6 +104,7 @@ public class WeiXinMainController extends BaseController {
 
 	@ResponseBody
 	@RequestMapping(value = "/login", method=RequestMethod.POST )
+	@LoginRequired
 	public Map login() throws IOException
 	{
 		HttpServletRequest request = SpringHttpHolder.getRequest();
@@ -109,6 +112,7 @@ public class WeiXinMainController extends BaseController {
 		// 将请求、响应的编码均设置为UTF-8（防止中文乱码）
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
+		response.setContentType(ContentType.APPLICATION_JSON.getMimeType());
 
 //		InputStream input = request.getInputStream();
 //		Map requestMap = request.getParameterMap();
@@ -145,14 +149,14 @@ public class WeiXinMainController extends BaseController {
 		userDO.setAvatar(userSessionInfo.getAvatarUrl());
 		userDO.setUnionId(unionId);
 		userDO.setOpenId(openId);
-		String werewolfSessionKey = userManager.login(sessionKey, userDO);
+		String wxSessionKey = userManager.login(sessionKey, userDO);
 //
 //		PrintWriter out = response.getWriter();
 //		//写入响应内容到response中
 //		out.print(responseContent);
 //		out.close();
 		map.put("userInfo", userSessionInfo);
-		map.put("thirdSessionKey", werewolfSessionKey);
+		map.put("thirdSessionKey", wxSessionKey);
 		map.put("msg", "success");
 		map.put("status", 1);
 		return map;
@@ -196,14 +200,14 @@ public class WeiXinMainController extends BaseController {
 		userDO.setAvatar(userSessionInfo.getAvatarUrl());
 		userDO.setUnionId(unionId);
 		userDO.setOpenId(openId);
-		String werewolfSessionKey = userManager.login(sessionKey, userDO);
+		String wxSessionKey = userManager.login(sessionKey, userDO);
 //
 //		PrintWriter out = response.getWriter();
 //		//写入响应内容到response中
 //		out.print(responseContent);
 //		out.close();
 		map.put("userInfo", userSessionInfo);
-		map.put("thirdSessionKey", werewolfSessionKey);
+		map.put("thirdSessionKey", wxSessionKey);
 		map.put("msg", "success");
 		map.put("status", 1);
 		return map;
